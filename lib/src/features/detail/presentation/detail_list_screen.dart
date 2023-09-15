@@ -158,7 +158,7 @@ class HistoryItem extends ConsumerWidget {
 
     return GestureDetector(
       onTap: () {
-        context.pushRoute(DetailListRoute(resource: resource));
+        context.pushRoute(DetailRoute(resource: resource, id: data.id));
       },
       child: Container(
         margin: const EdgeInsets.symmetric(

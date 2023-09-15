@@ -137,15 +137,17 @@ class ResourcesRepository {
 
   // address
   void saveAddress(Address address) {
-    userBox.put(address.zipCode, jsonEncode(address.toJson()));
+    addressBox.put(address.zipCode, jsonEncode(address.toJson()));
   }
 
   Address? getAddress(String zipCode) {
-    return Address.fromJson(jsonDecode(userBox.get(zipCode)));
+    return Address.fromJson(jsonDecode(addressBox.get(zipCode)));
   }
 
   List<Address> getAddresses() {
-    return userBox.values.map((e) => Address.fromJson(jsonDecode(e))).toList();
+    return addressBox.values
+        .map((e) => Address.fromJson(jsonDecode(e)))
+        .toList();
   }
 
   // bank

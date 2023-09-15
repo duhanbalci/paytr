@@ -3,6 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:paytr_test_case/src/common_widgets/avatar.dart';
 import 'package:paytr_test_case/src/constants/app_sizes.dart';
 import 'package:paytr_test_case/src/features/detail/domain/user/user.dart';
+import 'package:paytr_test_case/src/features/detail/presentation/details_kv.dart';
 
 class UserDetail extends ConsumerWidget {
   const UserDetail({
@@ -36,36 +37,6 @@ class UserDetail extends ConsumerWidget {
             DetailKV('Doğum Tarihi', user.dateOfBirth),
           ],
         ),
-      ),
-    );
-  }
-}
-
-class DetailKV extends StatelessWidget {
-  const DetailKV(
-    this.k,
-    this.v, {
-    super.key,
-  });
-
-  final String? k;
-  final String? v;
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
-      child: Row(
-        children: [
-          SizedBox(
-              width: MediaQuery.of(context).size.width / 3,
-              child: Text(k!, maxLines: 3)),
-          const Padding(
-            padding: EdgeInsets.only(right: 10),
-            child: Text(':'),
-          ),
-          Text(v!, maxLines: 3),
-        ],
       ),
     );
   }

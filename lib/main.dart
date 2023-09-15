@@ -19,6 +19,7 @@ Future<void> main() async {
     'beer',
     'bloodType',
     'creditCard',
+    'cache',
   ].map((e) => Hive.openBox(e)));
 
   final container = ProviderContainer(

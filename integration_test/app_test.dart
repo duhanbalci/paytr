@@ -38,6 +38,7 @@ void main() {
         'beer',
         'bloodType',
         'creditCard',
+        'cache',
       ].map((e) => Hive.openBox(e)));
 
       await tester.pumpWidget(UncontrolledProviderScope(

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:paytr_test_case/src/constants/app_sizes.dart';
 import 'package:paytr_test_case/src/features/detail/domain/beer/beer.dart';
-import 'package:paytr_test_case/src/features/detail/presentation/user_detail.dart';
+import 'package:paytr_test_case/src/features/detail/presentation/details_kv.dart';
 
 class BeerDetail extends ConsumerWidget {
   const BeerDetail({
